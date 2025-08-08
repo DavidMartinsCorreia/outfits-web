@@ -1,0 +1,12 @@
+# Ignorar ficheiros sensíveis e dependências
+.env
+node_modules/
+dist/
+*.log
+
+# Ignorar ficheiros do sistema
+.DS_Store
+Thumbs.db
+
+# Configuração do VS Code
+.vscode/
