@@ -4,7 +4,6 @@ import Hero from "./components/HeroSection/HeroSections/Hero.vue";
 </script>
 
 <template>
-  <!-- Container principal centralizado -->
   <div
     class="flex items-center justify-center w-full h-screen bg-pricipal-background"
   >

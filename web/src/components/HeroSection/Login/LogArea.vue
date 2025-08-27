@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import LoginModal from './LoginModal.vue'
 
 const imgProfile = ref<HTMLInputElement | null>(null);
 const showMenu = ref<boolean>(false);
@@ -45,28 +44,35 @@ function handleFileUpload(event: Event): void {
 <template>
   <div class="flex justify-end gap-4 p-6 text-gold-custom">
     <template v-if="!isLoggedIn">
-      <button
-        @click="showLogin = true"
-        class="px-6 py-2 border-2 rounded-3xl border-gold-custom"
-      >
-        Sign In
-      </button>
+      <div class="flex items-center justify-between w-full lg:justify-end">
+        <h1 class="text-lg font-bold text-gold-custom lg:hidden">LOGO</h1>
+        <button
+          @click="showLogin = true"
+          class="px-6 py-2 border-2 rounded-3xl border-gold-custom"
+        >
+          Sign In
+        </button>
+      </div>
     </template>
 
     <template v-else>
-      <div class="relative flex items-center gap-2">
-        <span
-          class="text-sm font-bold sm:text-base md:text-lg lg:text-xl xl:text-2xl"
-        >
-          {{ userName }}
-        </span>
+      <div class="flex items-center justify-between w-full lg:justify-end">
+        <h1 class="text-lg font-bold text-gold-custom lg:hidden">LOGO</h1>
+        <div class="flex items-center gap-3">
+          <span
+            class="text-sm font-bold sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+          >
+            {{ userName }}
+          </span>
 
-        <img
-          :src="userImage"
-          alt="User"
-          class="border-2 rounded-full border-gold-custom sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16"
-          @click="showMenu = !showMenu"
-        />
+          <img
+            :src="userImage"
+            alt="User"
+            class="border-2 rounded-full cursor-pointer border-gold-custom sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16"
+            @click="showMenu = !showMenu"
+          />
+        </div>
+
         <div
           v-if="showMenu"
           class="absolute right-0 top-12 mt-2 w-32 bg-[#181818] border border-gold-custom rounded shadow-lg z-50"

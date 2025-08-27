@@ -7,13 +7,14 @@ module.exports = {
   theme: {
     //aqui defenimos as cores personalizadas
     extend: {
-       colors: {
+      colors: {
         'gold-custom': '#BA995A',
+        'salmon-custom': '#C97C5D',
       },
       borderColor: {
         'gold-custom': '#BA995A',
       },
-      backgroundColor:{
+      backgroundColor: {
         'pricipal-background': '#161616',
       }
     },

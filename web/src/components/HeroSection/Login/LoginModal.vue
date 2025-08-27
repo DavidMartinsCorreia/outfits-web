@@ -49,17 +49,17 @@ async function submit() {
     <div
       class="bg-white p-6 rounded-2xl w-[300px] shadow-lg flex flex-col gap-4"
     >
-     
-      <div class="flex justify-end">
+      <div class="flex items-center justify-between mb-4">
+        
+        <h2 class="text-lg font-bold text-center">Sign In</h2>
+  
         <button
-          class="px-3 py-1 text-white bg-red-500 rounded hover:bg-red-600"
+          class="flex justify-end px-3 py-1 text-white bg-red-500 rounded hover:bg-red-600"
           @click="emits('close')"
         >
           ✕
         </button>
       </div>
-
-      <h2 class="text-lg font-bold text-center">Sign In</h2>
 
       <form @submit.prevent="submit" class="flex flex-col gap-3">
         <input
